@@ -11,11 +11,17 @@
     //Apresente o valor final a ser pago pela casa, considerando o juro estabelecido para a quantidade de anos de financiamento.
 
     //ENTRADA
-
+    const valorCasa = Number(prompt("Informe o valor da casa que ira comprar: "));
+    const anosFinanciamento = parseInt(prompt("Informe em quantos anos ira finaciar essa casa: "));
+    let juros 
 
     //PROCESSAMENTO
+    (anosFinanciamento > 20) ? juros = 1.85
+    : (anosFinanciamento > 10) ? juros = 1.60 
+    : juros = 1.45 
 
+    const valorFinal = valorCasa * juros
 
     //SAÍDA
-
+    document.write(`Valor novo da casa: ${valorFinal}`)
 </script>

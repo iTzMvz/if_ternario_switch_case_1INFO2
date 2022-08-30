@@ -5,16 +5,19 @@
     //Peça para o usuário informar o preço da gasolina de três diferentes postos de combustível e considere o seguinte cenário:
     //Se a média dos preços for até R$ 5,00 (inclusive 5), o programa deverá considerar que o preço está ACEITÁVEL
     //Se a média dos preços for até R$ 6,50 (inclusive 6.5), o programa deverá considerar que o preço está ALTO
-    //Se a média dos preços foro acima de R$ 6,50 (6.5), o programa deverá considerar que o preço está ABUSIVO
+    //Se a média dos preços for acima de R$ 6,50 (6.5), o programa deverá considerar que o preço está ABUSIVO
 
     //Apresente a situação do preço do combustível
 
     //ENTRADA
-
-
+    const postoA = Number(prompt("Informe o valor do litro da gasolina do primeiro posto: "));
+    const postoB = Number(prompt("Informe o valor do litro da gasolina do segundo posto: "));
+    const postoC = Number(prompt("Informe o valor do litro da gasolina do terceiro posto: "));
     //PROCESSAMENTO
-
-
+    const mediaPreco = (postoA + postoB + postoC) / 3;
+    (mediaPreco > 6.5) ? document.write(`Media do preco: ${mediaPreco.toFixed(2)} </br> ABUSIVO`)
+    : (mediaPreco > 5) ? document.write(`Media do preco: ${mediaPreco.toFixed(2)} </br> ALTO`)
+    : document.write(`Media do preco: ${mediaPreco.toFixed(2)} </br> ACEITAVEL`)
     //SAÍDA
 
 </script>
